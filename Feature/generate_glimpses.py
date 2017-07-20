@@ -67,7 +67,7 @@ def split_video(src, output_dir):
         clipId += 1
         dst = os.path.join(output_dir, "{0}-c{1:03d}.mp4".format(videoId, clipId))
         cmd = template.format(src, start, clip_length, dst)
-        #output = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE).stdout.read()
+        output = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE).stdout.read()
 
         start += stride
         clips.append(dst)
